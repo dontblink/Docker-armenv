@@ -45,7 +45,8 @@ ENV PATH $PATH:/home/dev/gcc-arm-none-eabi/bin
 WORKDIR /usr/lib
 RUN git clone https://github.com/ObKo/stm32-cmake.git ./stm32-cmake && \
 git clone https://github.com/STMicroelectronics/STM32CubeF4.git ./STM32CUBEF4 && \
-rm -rf /usr/lib/STM32CUBEF4/Projects
+git clone https://github.com/ThrowTheSwitch/Unity.git ./unity && \
+rm -rf /usr/lib/STM32CUBEF4/Projects \
 
 #fixes an issue with duplicate template files from STM32CUBEMX code generation
 #also finds the asm startup file
